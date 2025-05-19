@@ -2,11 +2,11 @@
 
 git_command()
 {
-	if [ $# != 1 ]; then
+	if [ $# -eq 0 ]; then
 		git add . 
 		git commit -m "commit"
 		git push
-	elif [ $# == 1 ]; then
+	elif [ $# -eq 1 ]; then
 		git add $1
 		git commit -m "commit"
 		git push
@@ -15,4 +15,4 @@ git_command()
 	fi
 }
 
-git_command $1
+git_command $2
