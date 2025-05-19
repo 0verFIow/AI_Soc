@@ -2,14 +2,16 @@
 
 git_command()
 {
-	if [ $# != 1]; then
+	if [ $# != 1 ]; then
 		git add . 
 		git commit -m "commit"
 		git push
-	else
+	elif [ $# == 1 ]; then
 		git add $1
 		git commit -m "commit"
 		git push
+	else
+		echo "Usage: up or up < file_name >"
 	fi
 }
 
