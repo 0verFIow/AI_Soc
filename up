@@ -15,4 +15,4 @@ git_command()
 	fi
 }
 
-git_command $2
+git_command $1
