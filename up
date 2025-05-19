@@ -1,0 +1,16 @@
+#!/bin/sh
+
+git_command()
+{
+	if [ $# != 1]; then
+		git add . 
+		git commit -m "commit"
+		git push
+	else
+		git add $1
+		git commit -m "commit"
+		git push
+	fi
+}
+
+git_command $1

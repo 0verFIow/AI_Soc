@@ -1,0 +1,30 @@
+#!/bin/sh
+
+example()
+{
+	
+MyName="이 웅"
+
+MyNumber="010-5189-7184"
+
+MyAddr="Korea"
+
+if [ $# != 1 ]; then
+	echo "Usage: t1 <1~3>"
+else
+	if [ $1 -lt 0 ] || [ $1 -gt 4 ]; then
+		echo "Should input 1 to 3"
+	else
+		if [ $1 -eq 1 ]; then
+			echo "My Name is $MyName"
+		elif [ $1 -eq 2 ]; then
+			echo "My Number is $MyNumber"
+		else
+			echo "My Address is $MyAddr"
+		fi
+	fi
+fi
+}
+
+example $1
+
